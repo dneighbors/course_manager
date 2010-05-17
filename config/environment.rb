@@ -7,6 +7,11 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+  config.gem 'searchlogic', :source => 'http://gemcutter.org'
+  config.gem 'will_paginate', :source => 'http://gemcutter.org'
+  config.gem 'bluecloth', :source => 'http://gemcutter.org'
+  config.gem 'hpricot', :source => 'http://gemcutter.org'
+  config.gem 'aasm', :source => 'http://gemcutter.org'
   config.gem 'authlogic', :source => 'http://gemcutter.org'
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
