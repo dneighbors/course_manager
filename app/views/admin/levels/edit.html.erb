@@ -1,0 +1,12 @@
+<h1>Editing level</h1>
+
+<% form_for [:admin, @level] do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', admin_level_path(@level) %> |
+<%= link_to 'Back', admin_levels_path %>

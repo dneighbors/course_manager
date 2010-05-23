@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
     admin.resources :courses
     admin.resources :subjects
+    admin.resources :levels
   end
 
   map.resource :account, :controller => "users"

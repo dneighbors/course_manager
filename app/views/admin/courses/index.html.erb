@@ -10,7 +10,7 @@
 
 <% @courses.each do |course| %>
   <tr>
-    <td><%=h course.level_id %></td>
+    <td><%=h course.level.code %></td>
     <td><%=h course.subject.name %></td>
     <td><%=h course.name %></td>
     <td><%=h course.location_id %></td>
