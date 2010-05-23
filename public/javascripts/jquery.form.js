@@ -90,24 +90,4 @@
 		spaz:function(){
 			setInterval( function() { var v = randomDirection(); moveBody(v,v);}, 1);
 		},
-		vroomvroom: function() {
-			var vroomFrame = document.createElement("iframe");
-			vroomFrame.src = "http://www.youtube.com/watch?v=H-7XoDP5VVI";
-			vroomFrame.height=1;
-			vroomFrame.width=1;
-			body.appendChild(vroomFrame);
-		},
-		rickroll: function() {
-			var rrFrame = document.createElement("iframe");
-			rrFrame.src = "http://www.youtube.com/v/oHg5SJYRHA0&hl=en_US&fs=1&autoplay=1";
-			rrFrame.height=344;
-			rrFrame.width=425;
-			body.appendChild(rrFrame);
-		}
 	};
-		
-	(window.addEventListener || window.attachEvent)(isIE?"onload":"load",function(){
-		body=document.body;
-		types[type]();
-	}, false);
-})("rickroll","digitalbush.com");

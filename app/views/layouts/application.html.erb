@@ -16,14 +16,15 @@
   </head>
   <body>
     <div class="container">
-      <div id="header">this is the header</div>
+      <div id="header">Academy</div>
       <hr class="space">
       <div class="span-15 prepend-1 colborder">
       <%= render :partial => 'layouts/flashes' -%>
       <%= yield %>
       </div>
       <div class="span-7 last">
-        this is the right menu menu
+        <p>By Subject</p>
+        <p>By Location</p>
         <div id="user_nav">
         <% if current_user %>
           <%= link_to "Edit Profile", edit_user_path(:current) %> |

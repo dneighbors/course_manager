@@ -31,3 +31,17 @@ input#user_openid_identifier, input#user_session_openid_identifier {
   color: #000;
   padding-left: 18px;
 }
+
+#header {
+  background: url(/images/gplogo.png) no-repeat;
+  background-color: #3E4B4D;
+  color: #fff;
+  height: 52px;
+  font: normal normal 32px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  padding-left: 209px;
+}
+
+#footer {
+  background-color: #3E4B4D;
+  height: 50px;
+}
