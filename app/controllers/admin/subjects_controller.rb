@@ -45,7 +45,7 @@ class Admin::SubjectsController < AdminController
     respond_to do |format|
       if @subject.save
         flash[:notice] = 'Subject was successfully created.'
-        format.html { redirect_to(@subject) }
+        format.html { redirect_to(admin_subject_path(@subject)) }
         format.xml  { render :xml => @subject, :status => :created, :location => @subject }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class Admin::SubjectsController < AdminController
     respond_to do |format|
       if @subject.update_attributes(params[:subject])
         flash[:notice] = 'Subject was successfully updated.'
-        format.html { redirect_to(@subject) }
+        format.html { redirect_to(admin_subject_path(@subject)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

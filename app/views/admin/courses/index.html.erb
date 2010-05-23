@@ -1,0 +1,26 @@
+<h1>Listing courses</h1>
+
+<table>
+  <tr>
+    <th>Level</th>
+    <th>Subject</th>
+    <th>Name</th>
+    <th>Location</th>
+  </tr>
+
+<% @courses.each do |course| %>
+  <tr>
+    <td><%=h course.level_id %></td>
+    <td><%=h course.subject.name %></td>
+    <td><%=h course.name %></td>
+    <td><%=h course.location_id %></td>
+    <td><%= link_to 'Show', admin_course_path(course) %></td>
+    <td><%= link_to 'Edit', edit_admin_course_path(course) %></td>
+    <td><%= link_to 'Destroy', admin_course_path(course), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New course', new_admin_course_path %>

@@ -1,26 +1,7 @@
-<h1>Listing courses</h1>
-
-<table>
-  <tr>
-    <th>Subject</th>
-    <th>Level</th>
-    <th>Name</th>
-    <th>Location</th>
-  </tr>
-
+<h1>Search Results</h1>
 <% @courses.each do |course| %>
-  <tr>
-    <td><%=h course.subject_id %></td>
-    <td><%=h course.level_id %></td>
-    <td><%=h course.name %></td>
-    <td><%=h course.location_id %></td>
-    <td><%= link_to 'Show', course %></td>
-    <td><%= link_to 'Edit', edit_course_path(course) %></td>
-    <td><%= link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div onclick="location.href='<%= subject_path(course) %>';" style="cursor:pointer;">
+    <h2><%=h course.subject.code %> <%=h course.level_id %> - <%=h course.name %></h2>
+    <p><%= truncate(course.overview, 100) %></p>
+  </div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New course', new_course_path %>
