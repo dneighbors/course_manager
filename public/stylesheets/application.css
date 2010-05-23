@@ -43,5 +43,8 @@ input#user_openid_identifier, input#user_session_openid_identifier {
 
 #footer {
   background-color: #3E4B4D;
-  height: 50px;
+  height: 25px;
+  color: #fff;
+  text-align: center;
+  padding-top: 5px;
 }

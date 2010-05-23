@@ -14,7 +14,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :account, :controller => "users"
   map.resources :users
   map.resource :user_session
-  map.root :controller => "subjects", :action => "index"
+  
+  map.root :controller => "contents", :action => "index"
+  
   map.login '/login/', :controller => "user_sessions", :action => "new"
   map.logout '/logout/', :controller => "user_sessions", :action => "destroy"
   map.signup '/signup/', :controller => "users", :action => "new"
