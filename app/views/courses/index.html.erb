@@ -1,7 +1,7 @@
 <h1>Search Results</h1>
 <% @courses.each do |course| %>
-  <div onclick="location.href='<%= subject_path(course) %>';" style="cursor:pointer;">
-    <h2><%=h course.subject.code %> <%=h course.level_id %> - <%=h course.name %></h2>
+  <div onclick="location.href='<%= course_path(course) %>';" style="cursor:pointer;">
+    <h2><%=h course.subject.code %> <%=h course.level.code %> - <%=h course.name %></h2>
     <p><%= truncate(course.overview, 100) %></p>
   </div>
 <% end %>
