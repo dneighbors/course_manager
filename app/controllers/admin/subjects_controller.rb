@@ -1,4 +1,6 @@
 class Admin::SubjectsController < AdminController
+  before_filter :require_user
+  
   # GET /subjects
   # GET /subjects.xml
   def index

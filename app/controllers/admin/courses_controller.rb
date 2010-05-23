@@ -1,4 +1,6 @@
 class Admin::CoursesController < AdminController
+  before_filter :require_user
+  
   # GET /courses
   # GET /courses.xml
   def index
