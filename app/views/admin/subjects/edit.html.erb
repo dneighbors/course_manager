@@ -1,6 +1,6 @@
 <h1>Editing subject</h1>
 
-<% form_for(@subject) do |f| %>
+<% form_for [:admin, @subject] do |f| %>
   <%= f.error_messages %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p>
@@ -8,5 +8,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @subject %> |
-<%= link_to 'Back', subjects_path %>
+<%= link_to 'Show', admin_subject_path(@subject) %> |
+<%= link_to 'Back', admin_subjects_path %>

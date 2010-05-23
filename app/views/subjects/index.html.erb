@@ -1,22 +1,7 @@
-<h1>Listing subjects</h1>
-
-<table>
-  <tr>
-    <th>Code</th>
-    <th>Name</th>
-  </tr>
-
+<h1>Search By Subject</h1>
+<h2>All Courses</h2>
 <% @subjects.each do |subject| %>
-  <tr>
-    <td><%=h subject.code %></td>
-    <td><%=h subject.name %></td>
-    <td><%= link_to 'Show', subject %></td>
-    <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-    <td><%= link_to 'Destroy', subject, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div onclick="location.href='<%= subject_courses_path(subject) %>';" style="cursor:pointer;">
+    <%=h subject.code %> - <%=h subject.name %>
+  </div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New subject', new_subject_path %>
