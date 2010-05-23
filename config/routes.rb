@@ -1,5 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :subjects
+  
+  map.resources :courses
+  map.resources :subjects do |subjects|
+    subjects.resources :courses
+  end
 
   map.resource :account, :controller => "users"
   map.resources :users

@@ -23,7 +23,7 @@
       <%= yield %>
       </div>
       <div class="span-7 last">
-        <p>By Subject</p>
+        <p><%= link_to('By Subject', subjects_path) %></p>
         <p>By Location</p>
         <div id="user_nav">
         <% if current_user %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  prerequisites: MyText
+  max_size: 1
+  min_size: 1
+  overview: MyText
+  subject_id: 1
+  level_id: 1
+  location_id: 1
+  delivery_type_id: 1
+  cost_in_cents: 1
+  early_bird_cost_in_cents: 1
+  early_bird_date: 2010-05-23 01:19:12
+
+two:
+  name: MyString
+  prerequisites: MyText
+  max_size: 1
+  min_size: 1
+  overview: MyText
+  subject_id: 1
+  level_id: 1
+  location_id: 1
+  delivery_type_id: 1
+  cost_in_cents: 1
+  early_bird_cost_in_cents: 1
+  early_bird_date: 2010-05-23 01:19:12

@@ -9,7 +9,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100523075531) do
+ActiveRecord::Schema.define(:version => 20100523081912) do
+
+  create_table "courses", :force => true do |t|
+    t.string   "name"
+    t.text     "prerequisites"
+    t.integer  "max_size"
+    t.integer  "min_size"
+    t.text     "overview"
+    t.integer  "subject_id"
+    t.integer  "level_id"
+    t.integer  "location_id"
+    t.integer  "delivery_type_id"
+    t.integer  "cost_in_cents"
+    t.integer  "early_bird_cost_in_cents"
+    t.datetime "early_bird_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false

@@ -1,0 +1,63 @@
+<p>
+  <b>Name:</b>
+  <%=h @course.name %>
+</p>
+
+<p>
+  <b>Prerequisites:</b>
+  <%=h @course.prerequisites %>
+</p>
+
+<p>
+  <b>Max size:</b>
+  <%=h @course.max_size %>
+</p>
+
+<p>
+  <b>Min size:</b>
+  <%=h @course.min_size %>
+</p>
+
+<p>
+  <b>Overview:</b>
+  <%=h @course.overview %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @course.subject_id %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h @course.level_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @course.location_id %>
+</p>
+
+<p>
+  <b>Delivery type:</b>
+  <%=h @course.delivery_type_id %>
+</p>
+
+<p>
+  <b>Cost in cents:</b>
+  <%=h @course.cost_in_cents %>
+</p>
+
+<p>
+  <b>Early bird cost in cents:</b>
+  <%=h @course.early_bird_cost_in_cents %>
+</p>
+
+<p>
+  <b>Early bird date:</b>
+  <%=h @course.early_bird_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

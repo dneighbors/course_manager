@@ -1458,3 +1458,665 @@ Rendering subjects/edit
 Rendered layouts/_flashes (0.3ms)
   [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
 Completed in 27ms (View: 18, DB: 4) | 200 OK [http://localhost/subjects/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (14.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (1)
+Migrating to CreateSessions (20100517083456)
+Migrating to CreateSubjects (20100523075531)
+Migrating to CreateCourses (20100523081912)
+  [4;36;1mSQL (159.0ms)[0m   [0;1mCREATE TABLE `courses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `prerequisites` text, `max_size` int(11), `min_size` int(11), `overview` text, `subject_id` int(11), `level_id` int(11), `location_id` int(11), `delivery_type_id` int(11), `cost_in_cents` int(11), `early_bird_cost_in_cents` int(11), `early_bird_date` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100523081912')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mdescribe `subjects`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `subjects`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:20:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (0.4ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/courses
+Rendering courses/index
+Completed in 101ms (View: 97, DB: 1) | 200 OK [http://localhost/courses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:20:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/courses
+Rendering courses/new
+Completed in 35ms (View: 27, DB: 2) | 200 OK [http://localhost/courses/new]
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#create (for 127.0.0.1 at 2010-05-23 01:22:35) [POST]
+  Parameters: {"course"=>{"level_id"=>"1", "prerequisites"=>"Be Gay.", "name"=>"Intro To Ruby", "early_bird_date(1i)"=>"2010", "early_bird_date(2i)"=>"5", "early_bird_date(3i)"=>"23", "delivery_type_id"=>"1", "overview"=>"Great course to learn how to program in Ruby.", "min_size"=>"2", "early_bird_date(4i)"=>"08", "early_bird_date(5i)"=>"20", "early_bird_cost_in_cents"=>"1000", "cost_in_cents"=>"100", "subject_id"=>"1", "location_id"=>"1", "max_size"=>"15"}, "commit"=>"Create", "action"=>"create", "controller"=>"courses"}
+  [4;36;1mCourse Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mCourse Create (0.4ms)[0m   [0;1mINSERT INTO `courses` (`name`, `prerequisites`, `level_id`, `created_at`, `min_size`, `overview`, `delivery_type_id`, `updated_at`, `early_bird_date`, `subject_id`, `cost_in_cents`, `early_bird_cost_in_cents`, `location_id`, `max_size`) VALUES('Intro To Ruby', 'Be Gay.', 1, '2010-05-23 08:22:35', 2, 'Great course to learn how to program in Ruby.', 1, '2010-05-23 08:22:35', '2010-05-23 08:20:00', 1, 100, 1000, 1, 15)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/courses/1
+Completed in 89ms (DB: 6) | 302 Found [http://localhost/courses]
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2010-05-23 01:22:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;36;1mCourse Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (1.8ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/courses
+Rendering courses/show
+Completed in 20ms (View: 9, DB: 6) | 200 OK [http://localhost/courses/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:22:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (0.4ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/courses
+Rendering courses/index
+  [4;35;1mCourse Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Completed in 13ms (View: 7, DB: 2) | 200 OK [http://localhost/courses]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:23:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (0.4ms)[0m   [0;1mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;35;1mCourse Columns (63.1ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendered layouts/_flashes (0.4ms)
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 186ms (View: 115, DB: 66) | 200 OK [http://localhost/courses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:24:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (0.4ms)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mCourse Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Rendered layouts/_flashes (0.4ms)
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 40ms (View: 30, DB: 5) | 200 OK [http://localhost/courses]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:28:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (0.5ms)[0m   [0;1mSELECT * FROM `courses` [0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActionView::MissingTemplate (Missing template courses/filtered.erb in view path app/views):
+  app/controllers/courses_controller.rb:13:in `index'
+  app/controllers/courses_controller.rb:7:in `index'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:28:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (0.4ms)[0m   [0;1mSELECT * FROM `courses` [0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+Rendered layouts/_flashes (0.1ms)
+Completed in 30ms (View: 9, DB: 3) | 200 OK [http://localhost/courses]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:28:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (0.4ms)[0m   [0;1mSELECT * FROM `courses` [0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+Rendered layouts/_flashes (0.1ms)
+Completed in 41ms (View: 8, DB: 2) | 200 OK [http://localhost/courses]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:30:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (0.8ms)[0m   [0;1mSELECT * FROM `courses` [0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;36;1mCourse Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Rendered layouts/_flashes (0.1ms)
+Completed in 39ms (View: 12, DB: 5) | 200 OK [http://localhost/courses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:31:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (1.1ms)[0m   [0mSELECT * FROM `courses` [0m
+  [4;36;1mUser Columns (287.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;35;1mCourse Columns (84.1ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendered layouts/_flashes (0.1ms)
+Completed in 406ms (View: 15, DB: 373) | 200 OK [http://localhost/courses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:32:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (0.4ms)[0m   [0;1mSELECT * FROM `courses` [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;36;1mCourse Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47courses47filtered46html46erb at /Users/derek/Sites/course_manager/app/views/courses/filtered.html.erb:5)
+Rendered layouts/_flashes (0.1ms)
+Completed in 126ms (View: 12, DB: 4) | 200 OK [http://localhost/courses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:32:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (0.4ms)[0m   [0mSELECT * FROM `courses` [0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;35;1mCourse Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47courses47filtered46html46erb at /Users/derek/Sites/course_manager/app/views/courses/filtered.html.erb:5)
+Rendered layouts/_flashes (0.1ms)
+Completed in 32ms (View: 8, DB: 5) | 200 OK [http://localhost/courses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:33:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mCourse Load (0.5ms)[0m   [0;1mSELECT * FROM `courses` [0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;36;1mCourse Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47courses47filtered46html46erb at /Users/derek/Sites/course_manager/app/views/courses/filtered.html.erb:5)
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+/Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:27: unknown regexp option - p
+/Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:28: syntax error, unexpected '<'
+        <div id="user_nav">
+         ^
+/Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:29: syntax error, unexpected '<'
+        <% if current_user ).to_s); @ou...
+         ^
+/Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting ')'
+        <% if current_user ).to_s); @output_buffer.conca...
+                          ^
+/Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:46: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \n  \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n  <head>\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <title>"
+
+
+
+
+; @output_buffer.concat(( @page_title || controller.action_name ).to_s); @output_buffer.concat "</title>\n      "
+; @output_buffer.concat(( stylesheet_link_tag 'screen', :media => 'screen, projection', :cache => true ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( stylesheet_link_tag 'print', :media => 'print', :cache => true ).to_s); @output_buffer.concat "\n  <!--[if IE]>\n    "
+
+; @output_buffer.concat(( stylesheet_link_tag 'ie', :media => 'screen, projection', :cache => true ).to_s); @output_buffer.concat "\n  <![endif]-->\n\n    "
+
+
+; @output_buffer.concat(( stylesheet_link_tag 'application', :media => 'all', :cache => true ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js", "jquery.form.js", "application", :cache => true  ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( yield :head ).to_s); @output_buffer.concat "\n  </head>\n  <body>\n    <div class=\"container\">\n      <div id=\"header\">Academy</div>\n      <hr class=\"space\">\n      <div class=\"span-15 prepend-1 colborder\">\n      "
+
+
+
+
+
+
+; @output_buffer.concat(( render :partial => 'layouts/flashes' ).to_s)
+@output_buffer.concat "      "; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n      </div>\n      <div class=\"span-7 last\">\n        <p>"
+
+
+; @output_buffer.concat(( link_to('By Subject', subjects_path)</p>
+        <p>By Location</p>
+        <div id="user_nav">
+        <% if current_user ).to_s); @output_buffer.concat "\n          "
+; @output_buffer.concat(( link_to "Edit Profile", edit_user_path(:current) ).to_s); @output_buffer.concat " |\n          "
+; @output_buffer.concat(( link_to "Logout", logout_path ).to_s); @output_buffer.concat "\n        "
+;  else ; @output_buffer.concat "\n          "
+; @output_buffer.concat(( link_to "Register", new_user_path ).to_s); @output_buffer.concat " |\n          "
+; @output_buffer.concat(( link_to "Login", login_path ).to_s); @output_buffer.concat "\n        "
+;  end ; @output_buffer.concat "\n      </div>\n      </div>\n      <hr class=\"space\">\n      <div id=\"footer\">\n        this is the footer\n      </div>    \n    </div>\n  </body>\n</html>\n"
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:46:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/derek/Sites/course_manager/app/controllers/courses_controller.rb:13:in `index'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/derek/Sites/course_manager/app/controllers/courses_controller.rb:7:in `index'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:27: unknown regexp option - p
+/Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:28: syntax error, unexpected '<'
+        <div id="user_nav">
+         ^
+/Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:29: syntax error, unexpected '<'
+        <% if current_user ).to_s); @ou...
+         ^
+/Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting ')'
+        <% if current_user ).to_s); @output_buffer.conca...
+                          ^
+/Users/derek/Sites/course_manager/app/views/layouts/application.html.erb:46: syntax error, unexpected kENSURE, expecting $end) on line #27 of app/views/layouts/application.html.erb:
+24:       </div>
+25:       <div class="span-7 last">
+26:         <p><%= link_to('By Subject', subjects_path)</p>
+27:         <p>By Location</p>
+28:         <div id="user_nav">
+29:         <% if current_user %>
+30:           <%= link_to "Edit Profile", edit_user_path(:current) %> |
+
+    app/views/layouts/application.html.erb:46:in `compile!'
+    app/controllers/courses_controller.rb:13:in `index'
+    app/controllers/courses_controller.rb:7:in `index'
+
+Rendered rescues/_trace (135.9ms)
+Rendered rescues/_request_and_response (60.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:33:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mCourse Load (0.4ms)[0m   [0mSELECT * FROM `courses` [0m
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;35;1mCourse Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47courses47filtered46html46erb at /Users/derek/Sites/course_manager/app/views/courses/filtered.html.erb:5)
+Rendered layouts/_flashes (0.1ms)
+Completed in 40ms (View: 17, DB: 5) | 200 OK [http://localhost/courses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-05-23 01:33:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subjects"}
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering subjects/by_subject
+  [4;36;1mSubject Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Rendered layouts/_flashes (0.1ms)
+Completed in 233ms (View: 50, DB: 3) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-05-23 01:33:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subjects"}
+  [4;35;1mSubject Load (0.3ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering subjects/by_subject
+  [4;35;1mSubject Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendered layouts/_flashes (0.1ms)
+Completed in 112ms (View: 6, DB: 4) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-05-23 01:33:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subjects"}
+  [4;36;1mSubject Load (0.3ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering subjects/by_subject
+  [4;36;1mSubject Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Rendered layouts/_flashes (0.1ms)
+Completed in 26ms (View: 6, DB: 5) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#edit (for 127.0.0.1 at 2010-05-23 01:33:32) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"subjects"}
+  [4;35;1mSubject Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSubject Load (0.3ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering subjects/edit
+Rendered layouts/_flashes (0.3ms)
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 26ms (View: 18, DB: 3) | 200 OK [http://localhost/subjects/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#edit (for 127.0.0.1 at 2010-05-23 01:33:36) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"subjects"}
+  [4;36;1mSubject Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSubject Load (1.9ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering subjects/edit
+Rendered layouts/_flashes (0.3ms)
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 28ms (View: 18, DB: 5) | 200 OK [http://localhost/subjects/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#edit (for 127.0.0.1 at 2010-05-23 01:33:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"subjects"}
+  [4;35;1mSubject Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSubject Load (1.6ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering subjects/edit
+Rendered layouts/_flashes (0.6ms)
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 130ms (View: 26, DB: 5) | 200 OK [http://localhost/subjects/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-05-23 01:38:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subjects"}
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering subjects/by_subject
+  [4;36;1mSubject Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+
+ActionView::TemplateError (undefined method `subject_courses' for #<ActionView::Base:0x1020412a0>) on line #4 of app/views/subjects/by_subject.html.erb:
+1: <h1>Search By Subject</h1>
+2: <h2>All Courses</h2>
+3: <% @subjects.each do |subject| %>
+4:   <div onclick="location.href='<%= subject_courses(subject) %>';" style="cursor:pointer;">
+5:     <%=h subject.code %> - <%=h subject.name %>
+6:   </div>
+7: <% end %>
+
+    app/views/subjects/by_subject.html.erb:4
+    app/views/subjects/by_subject.html.erb:3:in `each'
+    app/views/subjects/by_subject.html.erb:3
+    app/controllers/subjects_controller.rb:13:in `index'
+    app/controllers/subjects_controller.rb:7:in `index'
+
+Rendered rescues/_trace (133.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-05-23 01:38:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subjects"}
+  [4;35;1mSubject Load (0.5ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering subjects/by_subject
+  [4;35;1mSubject Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendered layouts/_flashes (0.2ms)
+Completed in 34ms (View: 11, DB: 4) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:38:28) [GET]
+  Parameters: {"action"=>"index", "subject_id"=>"1", "controller"=>"courses"}
+  [4;36;1mCourse Load (0.4ms)[0m   [0;1mSELECT * FROM `courses` [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;36;1mCourse Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47courses47filtered46html46erb at /Users/derek/Sites/course_manager/app/views/courses/filtered.html.erb:5)
+Rendered layouts/_flashes (0.1ms)
+Completed in 27ms (View: 7, DB: 5) | 200 OK [http://localhost/subjects/1/courses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:40:25) [GET]
+  Parameters: {"action"=>"index", "subject_id"=>"1", "controller"=>"courses"}
+
+NameError (undefined local variable or method `subject_id' for #<CoursesController:0x103595638>):
+  app/controllers/courses_controller.rb:6:in `index'
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:40:41) [GET]
+  Parameters: {"action"=>"index", "subject_id"=>"1", "controller"=>"courses"}
+  [4;35;1mSubject Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSubject Load (1.3ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+
+NoMethodError (undefined method `courses' for #<Subject:0x1023ba940>):
+  app/controllers/courses_controller.rb:6:in `index'
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:41:11) [GET]
+  Parameters: {"action"=>"index", "subject_id"=>"1", "controller"=>"courses"}
+  [4;35;1mSubject Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSubject Load (1.4ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+  [4;35;1mUser Columns (5.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;36;1mCourse Load (1.8ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.subject_id = 1) [0m
+  [4;35;1mCourse Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47courses47filtered46html46erb at /Users/derek/Sites/course_manager/app/views/courses/filtered.html.erb:5)
+Rendered layouts/_flashes (0.1ms)
+Completed in 134ms (View: 8, DB: 14) | 200 OK [http://localhost/subjects/1/courses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:41:36) [GET]
+  Parameters: {"action"=>"index", "subject_id"=>"1", "controller"=>"courses"}
+  [4;36;1mSubject Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSubject Load (0.5ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+  [4;36;1mUser Columns (24.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;35;1mCourse Load (13.7ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.subject_id = 1) [0m
+  [4;36;1mCourse Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47courses47filtered46html46erb at /Users/derek/Sites/course_manager/app/views/courses/filtered.html.erb:5)
+Rendered layouts/_flashes (0.1ms)
+Completed in 143ms (View: 30, DB: 42) | 200 OK [http://localhost/subjects/1/courses]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-05-23 01:41:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subjects"}
+  [4;36;1mSubject Load (0.3ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering subjects/by_subject
+  [4;36;1mSubject Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Rendered layouts/_flashes (0.2ms)
+Completed in 29ms (View: 6, DB: 4) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:41:53) [GET]
+  Parameters: {"action"=>"index", "subject_id"=>"2", "controller"=>"courses"}
+  [4;35;1mSubject Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSubject Load (0.8ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 2) [0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;36;1mCourse Load (0.5ms)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.subject_id = 2) [0m
+Rendered layouts/_flashes (0.1ms)
+Completed in 128ms (View: 5, DB: 8) | 200 OK [http://localhost/subjects/2/courses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-05-23 01:41:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subjects"}
+  [4;35;1mSubject Load (28.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mUser Columns (15.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering subjects/by_subject
+  [4;35;1mSubject Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendered layouts/_flashes (0.1ms)
+Completed in 80ms (View: 7, DB: 50) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2010-05-23 01:41:57) [GET]
+  Parameters: {"action"=>"index", "subject_id"=>"1", "controller"=>"courses"}
+  [4;36;1mSubject Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSubject Load (0.6ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering courses/filtered
+  [4;35;1mCourse Load (3.6ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.subject_id = 1) [0m
+  [4;36;1mCourse Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47courses47filtered46html46erb at /Users/derek/Sites/course_manager/app/views/courses/filtered.html.erb:5)
+Rendered layouts/_flashes (0.1ms)
+Completed in 48ms (View: 12, DB: 11) | 200 OK [http://localhost/subjects/1/courses]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-05-23 01:42:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"subjects"}
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering subjects/by_subject
+  [4;36;1mSubject Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Rendered layouts/_flashes (0.1ms)
+Completed in 25ms (View: 5, DB: 4) | 200 OK [http://localhost/subjects]

@@ -6,11 +6,13 @@ class SubjectsController < ApplicationController
 
     respond_to do |format|
       #replace with admin controller later
-      if current_user 
-        format.html
-      else
-        format.html { render 'by_subject'}# index.html.erb
-      end
+      format.html { 
+        if current_user 
+          render # index.html.erb
+        else
+          render 'by_subject' # by_subject.html.erb
+        end
+      }
       format.xml  { render :xml => @subjects }
     end
   end
