@@ -2120,3 +2120,272 @@ Rendering subjects/by_subject
   [4;36;1mSubject Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
 Rendered layouts/_flashes (0.1ms)
 Completed in 25ms (View: 5, DB: 4) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:48:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+Rendered layouts/_flashes (0.3ms)
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 39ms (View: 30, DB: 4) | 200 OK [http://localhost/courses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:48:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+Rendered layouts/_flashes (0.3ms)
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 49ms (View: 39, DB: 4) | 200 OK [http://localhost/courses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:49:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+Rendered layouts/_flashes (0.4ms)
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 150ms (View: 138, DB: 4) | 200 OK [http://localhost/courses/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:50:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+Rendered layouts/_flashes (0.3ms)
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 57ms (View: 46, DB: 4) | 200 OK [http://localhost/courses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:50:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+Rendered layouts/_flashes (0.3ms)
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 49ms (View: 39, DB: 4) | 200 OK [http://localhost/courses/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:50:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+Rendered layouts/_flashes (0.3ms)
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 132ms (View: 124, DB: 4) | 200 OK [http://localhost/courses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:51:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+Rendered layouts/_flashes (0.3ms)
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 48ms (View: 37, DB: 4) | 200 OK [http://localhost/courses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:51:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+Rendered layouts/_flashes (0.3ms)
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 38ms (View: 29, DB: 4) | 200 OK [http://localhost/courses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:51:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (21.5ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+  [4;36;1mSubject Load (0.7ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendered layouts/_flashes (0.3ms)
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 114ms (View: 82, DB: 25) | 200 OK [http://localhost/courses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:52:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+  [4;36;1mSubject Load (0.5ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+
+ActionView::TemplateError (undefined method `id name' for #<Subject:0x10225a550>) on line #28 of app/views/courses/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :subject_id %><br />
+28:     <%= f.select :subject_id, options_from_collection_for_select(Subject.all, 'id name', 'name') %>
+29:   </p>
+30:   <p>
+31:     <%= f.label :level_id %><br />
+
+    app/views/courses/new.html.erb:28
+    searchlogic (2.4.19) lib/searchlogic/rails_helpers.rb:72:in `fields_for'
+    searchlogic (2.4.19) lib/searchlogic/rails_helpers.rb:61:in `form_for'
+    app/views/courses/new.html.erb:3
+    app/controllers/courses_controller.rb:40:in `new'
+
+Rendered rescues/_trace (191.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:52:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;36;1mCourse Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+  [4;35;1mSubject Load (0.3ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+
+ActionView::TemplateError (undefined method `code name' for #<Subject:0x102b54c00>) on line #28 of app/views/courses/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :subject_id %><br />
+28:     <%= f.select :subject_id, options_from_collection_for_select(Subject.all, 'id', 'code name') %>
+29:   </p>
+30:   <p>
+31:     <%= f.label :level_id %><br />
+
+    app/views/courses/new.html.erb:28
+    searchlogic (2.4.19) lib/searchlogic/rails_helpers.rb:72:in `fields_for'
+    searchlogic (2.4.19) lib/searchlogic/rails_helpers.rb:61:in `form_for'
+    app/views/courses/new.html.erb:3
+    app/controllers/courses_controller.rb:40:in `new'
+
+Rendered rescues/_trace (52.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:56:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendered layouts/_flashes (0.4ms)
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 99ms (View: 87, DB: 5) | 200 OK [http://localhost/courses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:58:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;35;1mCourse Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x10240a300>) on line #2 of app/views/courses/_form.erb:
+1: <p>
+2:   <%= f.label :name %><br />
+3:   <%= f.text_field :name %>
+4: </p>
+5: <p>
+
+    app/views/courses/_form.erb:2
+    app/views/courses/new.html.erb:5
+    searchlogic (2.4.19) lib/searchlogic/rails_helpers.rb:72:in `fields_for'
+    searchlogic (2.4.19) lib/searchlogic/rails_helpers.rb:61:in `form_for'
+    app/views/courses/new.html.erb:3
+    app/controllers/courses_controller.rb:40:in `new'
+
+Rendered rescues/_trace (150.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#new (for 127.0.0.1 at 2010-05-23 01:59:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"courses"}
+  [4;36;1mCourse Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+Rendering template within layouts/application
+Rendering courses/new
+  [4;35;1mSubject Load (0.6ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Rendered courses/_form (30.5ms)
+Rendered layouts/_flashes (0.3ms)
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 65ms (View: 53, DB: 6) | 200 OK [http://localhost/courses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CoursesController#edit (for 127.0.0.1 at 2010-05-23 02:00:00) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"courses"}
+  [4;36;1mCourse Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.8ms)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/edit
+  [4;36;1mSubject Load (0.3ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendered courses/_form (23.2ms)
+Rendered layouts/_flashes (0.3ms)
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 150ms (View: 132, DB: 7) | 200 OK [http://localhost/courses/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#new (for 127.0.0.1 at 2010-05-23 02:01:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"subjects"}
+  [4;35;1mSubject Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/application
+Rendering subjects/new
+Rendered subjects/_form (1.6ms)
+Rendered layouts/_flashes (0.4ms)
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 44ms (View: 34, DB: 3) | 200 OK [http://localhost/subjects/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#edit (for 127.0.0.1 at 2010-05-23 02:01:14) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"subjects"}
+  [4;35;1mSubject Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering subjects/edit
+Rendered subjects/_form (4.5ms)
+Rendered layouts/_flashes (0.3ms)
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 205ms (View: 194, DB: 4) | 200 OK [http://localhost/subjects/1/edit]
