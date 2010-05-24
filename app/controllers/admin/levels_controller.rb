@@ -4,7 +4,7 @@ class Admin::LevelsController < AdminController
   # GET /levels
   # GET /levels.xml
   def index
-    @levels = Level.all
+    @levels = Level.find(:all, :order => "parent_code, code")
 
     respond_to do |format|
       format.html 

@@ -1,10 +1,10 @@
 <p>
   <%= f.label :level_id %><br />
-  <%= f.select :level_id, options_from_collection_for_select(Level.all, 'id', 'code', @course.level_id) %>
+  <%= f.select :level_id, options_from_collection_for_select(Level.find(:all, :order => "parent_code, code"), 'id', 'code', @course.level_id) %>
 </p>
 <p>
   <%= f.label :subject_id %><br />
-  <%= f.select :subject_id, options_from_collection_for_select(Subject.all, 'id', 'name', @course.subject_id) %>
+  <%= f.select :subject_id, options_from_collection_for_select(Subject.find(:all, :order => "name"), 'id', 'code_name', @course.subject_id) %>
 </p>
 <p>
   <%= f.label :name %><br />
