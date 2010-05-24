@@ -26,7 +26,7 @@ end
 
 deploy.task :symlink_config, :roles => :app, :except => {:no_release => true, :no_symlink => true} do
   run "ln -nsf #{shared_path}/config/database.yml #{current_release}/config"
-#  run "cd #{current_release} && RAILS_ENV=production rake db:migrate"
+  run "cd #{current_release} && RAILS_ENV=production rake db:migrate"
 end
 
 deploy.task :restart do
