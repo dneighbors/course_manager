@@ -1,7 +1,44 @@
-<p>
-  <b>Name:</b>
-  <%=h @course.name %>
-</p>
+<p><%= "#{@course.subject.name}" %></p>
+<h1><%= "#{@course.level.code} #{@course.name}" %></h1>
+<div style="float:left;">
+ <%= image_tag("default.png", :size => "150x150") %>
+</div>
+<div style="margin-left: 160px;">
+  <%=h @course.overview %>
+</div>
+<div style="clear:both"><!-- hi --></div>
+<div style="float:right">
+  <span>Details</span> <span>Prerequisites</span>
+</div>
+<div style="clear:both"><!-- hi --></div>
+
+<div style="border: 1px black solid">
+REGISTER NOW
+</div>
+<div style="float:left; width:150px; margin-top: 10px;">
+  <p>Cost: <%=h @course.cost_in_cents %></p>
+  <p>Early Bird: <%=h @course.early_bird_cost_in_cents %></p>
+  <p>Early Registration Ends: <%=h @course.early_bird_date %></p>
+</div>
+<div style="margin-left: 160px; margin-top: 10px;">
+  <p>Dates:</p>
+  xx-xx-xxxx
+  xx-xx-xxxx
+  xx-xx-xxxx
+</div>
+<div style="clear:both"><!-- hi --></div>
+
+<div style="float:left; width: 150px; margin-top: 10px;">
+  <p>Location</p>
+  <p><%=h @course.location_id %></p>
+  <p>21469 East Lords Way</p>
+  <p>Queen Creek, AZ 85225</p>
+</div>
+<div style="margin-left: 160px; margin-top: 10px;">
+  <iframe width="425" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=21469+East+Lords+Way,+Queen+Creek,+AZ&amp;sll=37.0625,-95.677068&amp;sspn=34.861942,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=21469+E+Lords+Way,+Queen+Creek,+Maricopa,+Arizona+85142&amp;z=14&amp;ll=33.262119,-111.62047&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=21469+East+Lords+Way,+Queen+Creek,+AZ&amp;sll=37.0625,-95.677068&amp;sspn=34.861942,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=21469+E+Lords+Way,+Queen+Creek,+Maricopa,+Arizona+85142&amp;z=14&amp;ll=33.262119,-111.62047" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+</div>
+<div style="clear:both"><!-- hi --></div>
+
 
 <p>
   <b>Prerequisites:</b>
@@ -9,56 +46,13 @@
 </p>
 
 <p>
-  <b>Max size:</b>
-  <%=h @course.max_size %>
-</p>
-
-<p>
-  <b>Min size:</b>
-  <%=h @course.min_size %>
-</p>
-
-<p>
-  <b>Overview:</b>
-  <%=h @course.overview %>
-</p>
-
-<p>
   <b>Details:</b>
   <%=h @course.details %>
 </p>
 
-<p>
-  <b>Subject:</b>
-  <%=h @course.subject.name %>
-</p>
-
-<p>
-  <b>Level:</b>
-  <%=h @course.level.code %>
-</p>
 
 <p>
   <b>Location:</b>
-  <%=h @course.location_id %>
+  
 </p>
 
-<p>
-  <b>Delivery type:</b>
-  <%=h @course.delivery_type_id %>
-</p>
-
-<p>
-  <b>Cost in cents:</b>
-  <%=h @course.cost_in_cents %>
-</p>
-
-<p>
-  <b>Early bird cost in cents:</b>
-  <%=h @course.early_bird_cost_in_cents %>
-</p>
-
-<p>
-  <b>Early bird date:</b>
-  <%=h @course.early_bird_date %>
-</p>
