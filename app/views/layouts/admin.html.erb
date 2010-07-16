@@ -18,11 +18,11 @@
     <div class="container">
       <div id="header" onclick="location.href='<%= root_url %>';" style="cursor:pointer;">Academy</div>
       <hr class="space">
-      <div class="span-15 prepend-1 colborder">
+      <div class="span-17 prepend-1 colborder">
       <%= render :partial => 'layouts/flashes' -%>
       <%= yield %>
       </div>
-      <div class="span-7 last">
+      <div class="span-5 last">
         <p><%= link_to('Manage Levels', admin_levels_path) %></p>
         <p><%= link_to('Manage Subjects', admin_subjects_path) %></p>
         <p><%= link_to('Manage Courses', admin_courses_path) %></p>

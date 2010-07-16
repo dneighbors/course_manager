@@ -81,7 +81,7 @@ input#user_openid_identifier, input#user_session_openid_identifier {
 
 .course-register {
   border: 2px #3E4B4D solid;
-  margin: 15px 0px 15px 200px;
+  margin: 15px 0px 15px 225px;
   text-align: center;
   font-size: 18pt;
   font-weight: bold;
@@ -95,7 +95,7 @@ input#user_openid_identifier, input#user_session_openid_identifier {
   float:left; 
   width:250px; 
   margin-top: 10px;
-  margin-left: 30px;
+  margin-left: 55px;
 }
 
 .course-cost-label {
@@ -113,7 +113,7 @@ input#user_openid_identifier, input#user_session_openid_identifier {
 }
 
 .course-dates-container {
-  margin-left: 325px;
+  margin-left: 350px;
   padding-top:10px
 }
 
@@ -131,4 +131,26 @@ input#user_openid_identifier, input#user_session_openid_identifier {
   font-size: 10pt;
   background: #F2C712;
   margin-bottom: 0px;
+}
+
+.location-container {
+  float:left; 
+  width: 225px; 
+  margin-top: 25px;">
+}
+
+.map-container {
+  margin-left: 250px; 
+  margin-top: 25px;
+}
+
+.course-location {
+  font-weight: bold;
+  font-size: 12pt;
+  margin-bottom: 5px;
+}
+
+.course-location-detail {
+  font-size: 12pt;
+  margin-bottom: 5px;
 }
