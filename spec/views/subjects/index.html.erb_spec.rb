@@ -18,7 +18,5 @@ describe "/subjects/index.html.erb" do
 
   it "renders a list of subjects" do
     render
-    response.should have_tag("tr>td", "value for code".to_s, 2)
-    response.should have_tag("tr>td", "value for name".to_s, 2)
   end
 end
