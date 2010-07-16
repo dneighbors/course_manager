@@ -16,12 +16,13 @@
 <div style="clear:both"><!-- hi --></div>
 
 <div class="course-register">
-REGISTER NOW
+  REGISTER NOW
 </div>
-<div style="float:left; width:150px; margin-top: 10px;">
-  <p>Cost: <%=h @course.cost_in_cents %></p>
-  <p>Early Bird: <%=h @course.early_bird_cost_in_cents %></p>
-  <p>Early Registration Ends: <%=h @course.early_bird_date %></p>
+
+<div class="course-cost-container">
+  <div class="course-cost-label">Cost:</div><div class="course-cost">$<%=h @course.cost_in_cents %></div>
+  <div class="course-cost-label">Early Bird:</div><div class="course-cost"> $<%=h @course.early_bird_cost_in_cents %></div>
+  <div class="course-cost-label" style="width: 150px;">Early Reg Ends:</div><div class="course-cost"> <%=h @course.early_bird_date.strftime('%B %d, %Y') %></div>
 </div>
 <div style="margin-left: 160px; margin-top: 10px;">
   <p>Dates:</p>

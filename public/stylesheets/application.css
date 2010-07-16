@@ -91,3 +91,23 @@ input#user_openid_identifier, input#user_session_openid_identifier {
   margin-left: 200px;
   padding: 0px 5px 0px 5px;
 }
+
+.course-cost-container {
+  float:left; 
+  width:150px; 
+  margin-top: 10px;
+}
+
+.course-cost-label {
+  float:left; 
+  width: 80px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-bottom: 5px;
+}
+
+.course-cost {
+  float:right;
+  font-size: 12pt;
+  margin-bottom: 5px;
+}
