@@ -73,15 +73,21 @@ input#user_openid_identifier, input#user_session_openid_identifier {
   float: right;
 }
 
-.course-prereq {
-  color: #D5B930;
+.course-details {
+  color: #F2C712;
   font-weight: bold;
   font-size: 10pt;
 }
 
-.course-details {
-  color: #D5B930;
+.course-register {
+  border: 2px #3E4B4D solid;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18pt;
   font-weight: bold;
-  font-size: 10pt;
-  margin-right: 40px;
+  color: #3E4B4D;
+  background-color: #F2C712;
+  width: 190px;
+  margin-left: 200px;
+  padding: 0px 5px 0px 5px;
 }
