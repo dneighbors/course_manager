@@ -1,5 +1,5 @@
 <p class="course-nav-desc"><%= "#{@course.subject.name}" %></p>
-<h1 class="course-header"><%= "#{@course.level.code} #{@course.name}" %></h1>
+<h1 class="course-header"><%= "#{@course.subject.code} #{@course.level.code} #{@course.name}" %></h1>
 
 <div class="instructor-image-container">
  <%= image_tag("default.png", :size => "150x150") %>
@@ -45,19 +45,10 @@
 <div style="clear:both"><!-- hi --></div>
 
 
-<p>
-  <b>Prerequisites:</b>
-  <%=h @course.prerequisites %>
-</p>
+<p class="course-label">Prerequisites</p>
+<p><%=h @course.prerequisites %></p>
 
-<p>
-  <b>Details:</b>
-  <%=h @course.details %>
-</p>
+<p class="course-label">Details</p>
+<p><%=h @course.details %></p>
 
-
-<p>
-  <b>Location:</b>
-  
-</p>
 
