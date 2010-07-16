@@ -123,5 +123,12 @@ input#user_openid_identifier, input#user_session_openid_identifier {
 }
 
 .bold {
-font-weight: bold;
+  font-weight: bold;
+}
+
+.course-instructor {
+  text-align: center;
+  font-size: 10pt;
+  background: #F2C712;
+  margin-bottom: 0px;
 }
