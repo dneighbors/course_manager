@@ -48,3 +48,40 @@ input#user_openid_identifier, input#user_session_openid_identifier {
   text-align: center;
   padding-top: 5px;
 }
+
+.course-nav-desc {
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+.course-header {
+  font-family: Arial, "MS Trebuchet", sans-serif;
+  font-size: 20pt;
+  color: #3E4B4D;
+}
+
+.instructor-image-container {
+  float:left;
+}
+
+.course-overview-container {
+  margin-left: 160px;
+  font-size: 12pt;
+}
+
+.float-right {
+  float: right;
+}
+
+.course-prereq {
+  color: #D5B930;
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+.course-details {
+  color: #D5B930;
+  font-weight: bold;
+  font-size: 10pt;
+  margin-right: 40px;
+}

@@ -1,14 +1,17 @@
-<p><%= "#{@course.subject.name}" %></p>
-<h1><%= "#{@course.level.code} #{@course.name}" %></h1>
-<div style="float:left;">
+<p class="course-nav-desc"><%= "#{@course.subject.name}" %></p>
+<h1 class="course-header"><%= "#{@course.level.code} #{@course.name}" %></h1>
+
+<div class="instructor-image-container">
  <%= image_tag("default.png", :size => "150x150") %>
 </div>
-<div style="margin-left: 160px;">
+<div class="course-overview-container">
   <%=h @course.overview %>
 </div>
 <div style="clear:both"><!-- hi --></div>
-<div style="float:right">
-  <span>Details</span> <span>Prerequisites</span>
+
+
+<div class="float-right">
+  <span class="course-details">Details</span> <span class="course-prereq">Prerequisites</span>
 </div>
 <div style="clear:both"><!-- hi --></div>
 
