@@ -1,0 +1,12 @@
+<h1>Editing location</h1>
+
+<% form_for [:admin, @location] do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', admin_location_path(@location) %> |
+<%= link_to 'Back', admin_location_path %>
