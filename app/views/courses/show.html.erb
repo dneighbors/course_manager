@@ -35,12 +35,13 @@
 
 <div class="location-container">
   <p class="course-location">Location</p>
-  <p class="course-location-detail"><%=h @course.location_id %></p>
-  <p class="course-location-detail">21469 East Lords Way</p>
-  <p class="course-location-detail">Queen Creek, AZ 85225</p>
+  <p class="course-location-detail"><%=h @course.location.name unless @course.location.nil? %></p>
+  <p class="course-location-detail"><%=h @course.location.address unless @course.location.nil? %></p>
+  <p class="course-location-detail"><%=h "#{@course.location.city}, #{@course.location.state} #{@course.location.zip}" unless @course.location.nil? %></p>
+  <p class="course-location-detail"><%= link_to("Venue Website", @course.location.url) unless @course.location.nil? %></p>
 </div>
 <div class="map-container">
-  <iframe width="415" height="225" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=21469+East+Lords+Way,+Queen+Creek,+AZ&amp;sll=37.0625,-95.677068&amp;sspn=34.861942,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=21469+E+Lords+Way,+Queen+Creek,+Maricopa,+Arizona+85142&amp;z=14&amp;ll=33.262119,-111.62047&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=21469+East+Lords+Way,+Queen+Creek,+AZ&amp;sll=37.0625,-95.677068&amp;sspn=34.861942,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=21469+E+Lords+Way,+Queen+Creek,+Maricopa,+Arizona+85142&amp;z=14&amp;ll=33.262119,-111.62047" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+  <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=250+S+Arizona+Ave,+Chandler,+AZ+85225&amp;sll=37.0625,-95.677068&amp;sspn=34.724817,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=250+S+Arizona+Ave,+Chandler,+Maricopa,+Arizona+85225&amp;ll=33.299745,-111.841903&amp;spn=0.009469,0.022724&amp;z=14&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=250+S+Arizona+Ave,+Chandler,+AZ+85225&amp;sll=37.0625,-95.677068&amp;sspn=34.724817,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=250+S+Arizona+Ave,+Chandler,+Maricopa,+Arizona+85225&amp;ll=33.299745,-111.841903&amp;spn=0.009469,0.022724&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 </div>
 <div style="clear:both"><!-- hi --></div>
 
