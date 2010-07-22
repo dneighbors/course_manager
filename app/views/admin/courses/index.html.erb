@@ -13,7 +13,7 @@
     <td><%=h course.level.code %></td>
     <td><%=h course.subject.name %></td>
     <td><%=h course.name %></td>
-    <td><%=h course.location.name if course.location %></td>
+    <td><%=h course.location.name unless course.location.blank? %></td>
     <td><%= link_to 'Show', admin_course_path(course) %></td>
     <td><%= link_to 'Edit', edit_admin_course_path(course) %></td>
     <td><%= link_to 'Destroy', admin_course_path(course), :confirm => 'Are you sure?', :method => :delete %></td>
