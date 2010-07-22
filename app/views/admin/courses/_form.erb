@@ -32,7 +32,7 @@
 </p>
 <p>
   <%= f.label :location_id %><br />
-  <%= f.text_field :location_id %>
+  <%= f.select :location_id, options_from_collection_for_select(Location.find(:all, :order => "name"), 'id', 'name', @course.location_id) %>
 </p>
 <p>
   <%= f.label :delivery_type_id %><br />
