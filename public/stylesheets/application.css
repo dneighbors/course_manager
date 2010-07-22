@@ -79,6 +79,13 @@ input#user_openid_identifier, input#user_session_openid_identifier {
   font-size: 10pt;
 }
 
+.course-details a {
+  color: #F2C712;
+  font-weight: bold;
+  font-size: 10pt;
+  text-decoration: none;
+}
+
 .course-register {
   border: 2px #3E4B4D solid;
   margin: 15px 0px 15px 225px;
@@ -129,6 +136,7 @@ input#user_openid_identifier, input#user_session_openid_identifier {
 .course-label {
   font-weight:bold;
   margin-top: 15px;
+  margin-bottom: 10px;
   font-size: 14pt;
 }
 .course-instructor {
@@ -159,4 +167,8 @@ input#user_openid_identifier, input#user_session_openid_identifier {
 .course-location-detail {
   font-size: 12pt;
   margin-bottom: 5px;
+}
+
+.course-content {
+  padding-left: 10px;
 }

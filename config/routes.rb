@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  
+
+  map.resources :locations
   map.resources :courses
   map.resources :subjects do |subjects|
     subjects.resources :courses
@@ -9,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :courses
     admin.resources :subjects
     admin.resources :levels
+    admin.resources :locations
   end
 
   map.resource :account, :controller => "users"

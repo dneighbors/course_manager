@@ -12,7 +12,7 @@
 
 
 <div class="float-right">
-  <span class="course-details">Details |</span> <span class="course-details">Prerequisites</span>
+  <span class="course-details"><a href="#details">Details</a> |</span> <span class="course-details"><a href="#prereq">Prerequisites</a></span>
 </div>
 <div style="clear:both"><!-- hi --></div>
 
@@ -45,10 +45,10 @@
 <div style="clear:both"><!-- hi --></div>
 
 
-<p class="course-label">Prerequisites</p>
-<p><%=h @course.prerequisites %></p>
+<p id="details" class="course-label">Details</p>
+<p class="course-content"><%=h @course.details %></p>
 
-<p class="course-label">Details</p>
-<p><%=h @course.details %></p>
+<p id="prereq" class="course-label">Prerequisites</p>
+<p class="course-content"><%=h @course.prerequisites %></p>
 
 
