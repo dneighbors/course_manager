@@ -11,4 +11,15 @@ class LocationsController < ApplicationController
     end
   end
 
+  # GET /locations
+  # GET /locations.xml
+  def index
+    @locations = Location.find(:all)
+
+    respond_to do |format|
+      format.html 
+      format.xml  { render :xml => @locations }
+    end
+  end
+
 end
