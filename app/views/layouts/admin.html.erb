@@ -4,6 +4,7 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title><%= @page_title || controller.action_name %></title>
+      <%= include_tiny_mce_if_needed %>
       <%= stylesheet_link_tag 'screen', :media => 'screen, projection', :cache => false %>
   <%= stylesheet_link_tag 'print', :media => 'print', :cache => false %>
   <!--[if IE]>
