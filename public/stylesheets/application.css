@@ -189,7 +189,7 @@ h3.feature-course-name a, h3.feature-course-name a:visited {
 }
 
 h3.feature-course-name a:hover {
-  color: #3E4B4D;
+  color: #F2C712;
   text-decoration: none;
 }
 
@@ -199,10 +199,12 @@ h3.feature-course-name a:hover {
    font-size: 8pt;
    margin-bottom: 15px;
    margin-top: 0px;
+   color: #3E4B4D;
 }
 
 .feature-course-subject {
   font-size: 8pt;
   margin-bottom: 15px;
   margin-top: 0px;
+  color: #3E4B4D;
 }
