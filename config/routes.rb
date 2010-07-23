@@ -1,6 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :locations
+  map.resources :locations do |locations|
+    locations.resources :courses
+  end
+  
   map.resources :courses
   map.resources :subjects do |subjects|
     subjects.resources :courses

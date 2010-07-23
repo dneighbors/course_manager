@@ -24,8 +24,9 @@
       <%= yield %>
       </div>
       <div class="span-5 last">
-        <p><%= link_to('By Subject', subjects_path) %></p>
-        <p>By Location</p>
+      <h2>Course Listing</h2>
+      <p><%= link_to('By Subject', subjects_path) %></p>
+      <p><%= link_to('By Location', locations_path) %></p>
         <div id="user_nav">
         <% if current_user %>
           <%= link_to "Edit Profile", edit_user_path(:current) %> |

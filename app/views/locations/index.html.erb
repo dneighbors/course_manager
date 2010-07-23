@@ -1,16 +1,7 @@
-<h1>Listing locations</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
-
+<h1>Search By Location</h1>
+<h2>All Locations</h2>
 <% @locations.each do |location| %>
-  <tr>
-    <td><%=h location.name %></td>
-    <td><%= link_to 'Show', admin_location_path(location) %></td>
-  </tr>
+  <div onclick="location.href='<%= location_courses_path(location) %>';" style="cursor:pointer;">
+    <%=h location.name %>
+  </div>
 <% end %>
-</table>
-
-<br />

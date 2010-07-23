@@ -1,5 +1,5 @@
 <h1>Search By Subject</h1>
-<h2>All Courses</h2>
+<h2>All Subjects</h2>
 <% @subjects.each do |subject| %>
   <div onclick="location.href='<%= subject_courses_path(subject) %>';" style="cursor:pointer;">
     <%=h subject.code %> - <%=h subject.name %>
