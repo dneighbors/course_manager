@@ -172,3 +172,24 @@ input#user_openid_identifier, input#user_session_openid_identifier {
 .course-content {
   padding-left: 10px;
 }
+
+.feature-course-name {
+  font-size: 14pt;
+  font-weight: bold;
+  color: #3E4B4D;
+  margin-bottom: 0px;
+}
+
+.feature-course-location {
+   text-align: right;
+   font-style: italic;
+   font-size: 8pt;
+   margin-bottom: 10px;
+   margin-top: 0px;
+}
+
+.feature-course-subject {
+  font-size: 8pt;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
