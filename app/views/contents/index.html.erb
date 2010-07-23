@@ -19,7 +19,7 @@
 <div class="span-8">
 <h2>Featured Courses</h2>
 </div>
-<div class="span-8" style="background-color:#E5F2FD;padding:10px 10px 10px 10px">
+<div class="span-8" style="background-color:#F7F7F9;padding:10px 10px 10px 10px">
   <% @courses.each do |course| %>
     <h3 class="feature-course-name"><%= link_to(truncate(course.name, 32), course_path(course)) %></h3>
     <div class="feature-course-subject">
