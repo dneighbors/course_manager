@@ -178,6 +178,19 @@ input#user_openid_identifier, input#user_session_openid_identifier {
   font-weight: bold;
   color: #3E4B4D;
   margin-bottom: 0px;
+  
+}
+
+
+
+h3.feature-course-name a, h3.feature-course-name a:visited {
+  color: #F2C712;
+  text-decoration: none;
+}
+
+h3.feature-course-name a:hover {
+  color: #3E4B4D;
+  text-decoration: none;
 }
 
 .feature-course-location {
